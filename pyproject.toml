@@ -4,7 +4,23 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12.11"
-dependencies = []
+dependencies = [
+    "accelerate>=1.10.1",
+    "altair>=5.5.0",
+    "einops>=0.8.1",
+    "ipython>=9.5.0",
+    "jupyter>=1.1.1",
+    "jupyterlab>=4.4.7",
+    "lightning>=2.5.5",
+    "matplotlib>=3.10.6",
+    "pandas>=2.3.2",
+    "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
+    "tensorboard>=2.20.0",
+    "torch>=2.8.0",
+    "torchvision>=0.23.0",
+    "wandb>=0.21.4",
+]
 
 [dependency-groups]
 dev = [
