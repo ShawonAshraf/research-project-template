@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# editors and ide
+.vscode/
+.idea/
+
+# jupyter notebooks
+.ipynb_checkpoints
+
+# tensorboard logs
+tb_logs/
+# wandb logs
+target/
