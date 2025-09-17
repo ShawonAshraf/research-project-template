@@ -20,3 +20,7 @@ wheels/
 tb_logs/
 # wandb logs
 target/
+
+
+# env vars
+.env

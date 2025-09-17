@@ -2,6 +2,23 @@
 
 A python project template for research work. 
 
+
+## project structure
+
+```bash
+research-project-template/
+├── devcontainer.Dockerfile
+├── pyproject.toml
+├── README.md
+├── uv.lock
+├── notebooks/
+│   └── placeholder.ipynb
+└── src/
+    ├── __init__.py
+    └── main.py
+```
+
+
 ## included packages
 
 ```bash
@@ -31,7 +48,7 @@ A python project template for research work.
 > via `pyenv`. You can find more about it [here](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation).
 
 
-Install `uv`.
+Install `uv`. Also get a `wandb` api key if you're planning to use [Weights & Biases](https://wandb.ai/site). 
 
 ```bash
 # linux or macOS
@@ -58,11 +75,24 @@ source .venv/bin/activate
 
 
 > [!TIP]
-> The provided `main.py` file is a placeholder. You can modify or remove it as needed.
+> The provided `src/main.py` file is a placeholder. You can modify or remove it as needed.
+
+
+If you're going to use `wandb`, copy the contents of the `.env.example` file to a new file named `.env` and then edit the api key value with your api key. In your code, you can use `python-dotenv` to load the api key.
+
+```python
+import os
+from dotenv import load_dotenv
+
+# assuming your code is inside src/
+load_dotenv(dotenv_path="../.env", override=True)
+
+WANDB_API_KEY = os.getenv("WANDB_API_KEY")
+```
 
 
 
 ## devcontainer
 
-In case you prefer a container based solution (via docker, podman, containerd etc.) for your project to avoid the hassle of linking local package dependencies (e.g. glibc, cuda, etc.), you can use the provided devcontainer with Visual Studio Code or Pycharm.
+In case you prefer a container based solution (via `docker`, `podman`, `containerd` etc.) for your project to avoid the hassle of linking local package dependencies (e.g. `glibc`, `cuda`, etc.), you can use the provided devcontainer with Visual Studio Code or Pycharm.
 
