@@ -1,0 +1,1 @@
+This folder is meant for model checkpoints, generated data, results etc. Ideally you should be tracking your experiments via Tensorboard or wandb, unless there are strict restrictions on data sharing. (You shouldn't be sharing your data via version control either so, make sure to ignore them in the `.gitignore`.)

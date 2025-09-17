@@ -5,18 +5,27 @@ A python project template for research work.
 
 ## project structure
 
+> [!TIP]
+> The provided `src/main.py` file is a placeholder. You can modify or remove it as needed.
+
+
 ```bash
 research-project-template/
 ├── devcontainer.Dockerfile
 ├── pyproject.toml
 ├── README.md
 ├── uv.lock
+├── artefacts
 ├── notebooks/
 │   └── placeholder.ipynb
 └── src/
     ├── __init__.py
     └── main.py
 ```
+
+> [!NOTE]
+> Tensorboard logs are ignored in the `.gitignore` file as `tb_logs`. 
+> If you use a different name for the logging folder, make sure to update it.
 
 
 ## included packages
@@ -72,11 +81,6 @@ source .venv/bin/activate
 # windows
 .venv\Scripts\activate
 ```
-
-
-> [!TIP]
-> The provided `src/main.py` file is a placeholder. You can modify or remove it as needed.
-
 
 If you're going to use `wandb`, copy the contents of the `.env.example` file to a new file named `.env` and then edit the api key value with your api key. In your code, you can use `python-dotenv` to load the api key.
 

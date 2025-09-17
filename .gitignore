@@ -24,3 +24,6 @@ target/
 
 # env vars
 .env
+
+# ruff
+.ruff_cache/
